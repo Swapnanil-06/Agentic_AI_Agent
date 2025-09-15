@@ -1,0 +1,3 @@
+I am Swapnanil Chattopadhyay, a second-year Electronics and Computer Engineering student at the University of Sheffield with a passion for hands-on projects in IoT, CubeSat systems, and Data Analytics.
+I enjoy bridging technology and real-world impact, whether it’s developing remote healthcare monitoring solutions, designing satellite avionics, or running machine learning simulations and building application in ORDS Apex.
+Beyond engineering, I am an active sports enthusiast, playing football at the campus and departmental level.
