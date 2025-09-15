@@ -76,7 +76,7 @@ When configured with Pushover:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-🎓 Inspiration & Credits
+##🎓 Inspiration & Credits
 This project is heavily inspired by Ed Donner's Complete Agentic AI Engineering Course on Udemy. The course provided excellent guidance on building intelligent AI agents with function calling capabilities and practical implementation patterns.
 Course: Complete Agentic AI Engineering Course by Ed Donner
 Instructor: Ed Donner - Co-Founder and CTO at AI startup Nebula.io
@@ -84,4 +84,4 @@ Special thanks to Ed for the comprehensive course content that made this project
 
 ---
 
-**Note**: This agent represents my personal and professional background. Feel free to adapt the code for your own use case!
+
