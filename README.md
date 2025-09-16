@@ -21,7 +21,8 @@ The application is hosted on Hugging Face Spaces for easy access and demonstrati
 The system follows a multi-layered architecture with robust error handling:
 
 System Flow Diagram
-![WhatsApp Image 2025-09-15 at 09 00 08_b5aad897](https://github.com/user-attachments/assets/60a311af-0f3f-4e83-81af-c2ce16e01d46)
+<img width="1744" height="1710" alt="Business process flow example" src="https://github.com/user-attachments/assets/38519bff-25e8-44b6-a18e-22620736fb85" />
+
 
 
 ### Flow Overview:
