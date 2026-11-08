@@ -4,6 +4,8 @@ I am a Software Engineering Intern in Application Infrastructure at Morgan Stanl
 
 My projects include Agent Arena, a team-built 3D venue and playable shooter that was a top-six finalist at the OpenAI DevDay Community Hackathon; auction-based chip placement optimisation; and an AI website assistant built using Python, Groq and Gradio. I also have interests in IoT, CubeSat systems, data analytics and machine learning.
 
+Research Replay (time-travel debugger for financial research) is my independent project for capturing, comparing and replaying financial research runs. It stores the data, model source, parameters, environment and output as SHA-256-addressed artifacts, checks integrity, re-executes captured runs and compares their output, and uses an approval-based release gate to check candidate artifacts. It includes a Python and SQLite workbench, browser interface, CLI, export/import and a Cloudflare Workers deployment. The demonstration uses US 10-year Treasury yield data and an injected historical data correction: the five-step forecast changes by −6.25 basis points, while replay reproduces the original output. The model is an illustrative reproducibility example, not a validated forecast or trading strategy. The project is independent and has no affiliation with LMR Partners. Repository: https://github.com/Swapnanil-06/time-travel-debugger-for-financial-research
+
 My leadership roles include President of Engineers Without Borders, Vice President of EEESoc and co-founder of GDG on Campus Sheffield. I enjoy playing football.
 
 Contact: swapnanilchattopadhyay06@gmail.com
