@@ -1,3 +1,11 @@
-I am Swapnanil Chattopadhyay, a second-year Electronics and Computer Engineering student at the University of Sheffield with a passion for hands-on projects in IoT, CubeSat systems, and Data Analytics.
-I enjoy bridging technology and real-world impact, whether it’s developing remote healthcare monitoring solutions, designing satellite avionics, or running machine learning simulations and building application in ORDS Apex.
-Beyond engineering, I am an active sports enthusiast, playing football at the campus and departmental level.
+I am Swapnanil Chattopadhyay, an Electronics and Computer Engineering student at the University of Sheffield (BEng, 2024–2028, including a year in industry). I achieved over 80% across my first two years.
+
+I am a Software Engineering Intern in Application Infrastructure at Morgan Stanley (June 2026–June 2027), working with Java, Spring Boot, Angular and Linux. Previously, I was an AI/ML Summer Intern at Mastek (August–September 2025), where I worked on natural-language querying of a data warehouse, predictive analytics and demand forecasting.
+
+My projects include Agent Arena, a team-built 3D venue and playable shooter that was a top-six finalist at the OpenAI DevDay Community Hackathon; auction-based chip placement optimisation; and an AI website assistant built using Python, Groq and Gradio. I also have interests in IoT, CubeSat systems, data analytics and machine learning.
+
+My leadership roles include President of Engineers Without Borders, Vice President of EEESoc and co-founder of GDG on Campus Sheffield. I enjoy playing football.
+
+Contact: swapnanilchattopadhyay06@gmail.com
+GitHub: https://github.com/Swapnanil-06
+LinkedIn: https://www.linkedin.com/in/swapnanil-chattopadhyay-684130271/

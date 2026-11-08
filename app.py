@@ -3,9 +3,11 @@ from openai import OpenAI
 import json
 import os
 import requests
+from pathlib import Path
 from pypdf import PdfReader
 import gradio as gr
-load_dotenv(override=True)
+BASE_DIR = Path(__file__).resolve().parent
+load_dotenv(BASE_DIR / ".env", override=False)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 
@@ -78,13 +80,13 @@ class Me:
     def __init__(self):
         self.openai = OpenAI(api_key=GROQ_API_KEY, base_url="https://api.groq.com/openai/v1")
         self.name = "Swapnanil Chattopadhyay"
-        reader = PdfReader("me/NEW_CV__.pdf")
+        reader = PdfReader(BASE_DIR / "me" / "NEW_CV__.pdf")
         self.linkedin = ""
         for page in reader.pages:
             text = page.extract_text()
             if text:
                 self.linkedin += text
-        with open("me/summary.txt", "r", encoding="utf-8") as f:
+        with open(BASE_DIR / "me" / "summary.txt", "r", encoding="utf-8") as f:
             self.summary = f.read()
 
     def convert_gradio_history(self, history):
@@ -123,7 +125,7 @@ particularly questions related to {self.name}'s career, background, skills and e
 Your responsibility is to represent {self.name} for interactions on the website as faithfully as possible. \
 You are given a summary of {self.name}'s background and LinkedIn profile which you can use to answer questions. \
 Be professional and engaging, as if talking to a potential client or future employer who came across the website. \
-If you don't know the answer to any question, use your record_unknown_question tool to record the question that you couldn't answer, even if it's about something trivial or unrelated to career. \
+Respond naturally to greetings and simple conversation. If you lack the information needed to answer a substantive question about Swapnanil, use the record_unknown_question tool. \
 If the user is engaging in discussion, try to steer them towards getting in touch via email; ask for their email and record it using your record_user_details tool. "
 
         system_prompt += f"\n\n## Summary:\n{self.summary}\n\n## LinkedIn Profile:\n{self.linkedin}\n\n"
@@ -132,6 +134,10 @@ If the user is engaging in discussion, try to steer them towards getting in touc
     
     def chat(self, message, history):
         try:
+            # Simple greetings remain useful even if the model service is unavailable.
+            if message.strip().lower().strip(" !.,?") in {"hi", "hello", "hey", "hiya"}:
+                return "Hi! I’m Swapnanil’s AI assistant. What would you like to know about my experience or projects?"
+
             # Convert Gradio history to OpenAI format
             converted_history = self.convert_gradio_history(history)
             
@@ -148,7 +154,7 @@ If the user is engaging in discussion, try to steer them towards getting in touc
             
             while not done:
                 response = self.openai.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
+                    model="openai/gpt-oss-120b",
                     messages=messages,
                     tools=tools,
                     max_tokens=1000,
@@ -197,24 +203,9 @@ If the user is engaging in discussion, try to steer them towards getting in touc
             error_text = f"Chatbot failed.\nUser asked: {message}\nError: {str(e)}"
             print(f"ERROR: {error_text}", flush=True)
 
-            # Push notification
-            try:
-                push(error_text)
-            except Exception as push_err:
-                print(f"Push notification failed: {push_err}", flush=True)
+            # A service failure is not an unknown question, and notification may fail too.
+            return "Sorry, the assistant is temporarily unavailable. Please try again later or email swapnanilchattopadhyay06@gmail.com."
 
-            # Record unknown question
-            try:
-                record_unknown_question(message)
-            except Exception as log_err:
-                print(f"Failed to log unknown question: {log_err}", flush=True)
-                try:
-                    push(f"Failed to log unknown question: {log_err}")
-                except:
-                    pass
-
-            # Graceful fallback to user
-            return "Sorry, I can't answer that right now. The owner has been notified and your question has been recorded."
 
     
 
