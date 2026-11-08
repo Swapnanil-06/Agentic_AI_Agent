@@ -1,4 +1,4 @@
-I am Swapnanil Chattopadhyay, an Electronics and Computer Engineering student at the University of Sheffield (BEng, 2024–2028, including a year in industry). I achieved over 80% across my first two years and am currently on my year in industry (2026–2027).
+I am Swapnanil Chattopadhyay, an Electronics and Computer Engineering student at the University of Sheffield (BEng, 2024–2028, including a year in industry). I achieved over 80% across my first two years and am currently in the THIRD YEAR of my programme: my year in industry (2026–2027).
 
 I am a Software Engineering Intern in Application Infrastructure at Morgan Stanley (June 2026–June 2027), working with Java, Spring Boot, Angular and Linux. Previously, I was an AI/ML Summer Intern at Mastek (August–September 2025), where I worked on natural-language querying of a data warehouse, predictive analytics and demand forecasting.
 
@@ -9,3 +9,6 @@ My leadership roles include President of Engineers Without Borders, Vice Preside
 Contact: swapnanilchattopadhyay06@gmail.com
 GitHub: https://github.com/Swapnanil-06
 LinkedIn: https://www.linkedin.com/in/swapnanil-chattopadhyay-684130271/
+
+
+Degree chronology (authoritative): Year 1 = 2024–2025; Year 2 = 2025–2026; Year 3 = 2026–2027 (year in industry); Year 4 = 2027–2028 (final academic year after placement). A four-year degree does NOT mean I am currently a fourth-year student. During the 2026–2027 placement I am a third-year student.
